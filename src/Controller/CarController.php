@@ -28,6 +28,7 @@ class CarController extends AbstractController
         $availability = [];
 
         foreach ($cars as $car) {
+            //use service
             $availability[$car->getId()] = $this->carAvailabilityService->isCarAvailable($car);
         }
 

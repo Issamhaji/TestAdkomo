@@ -44,7 +44,7 @@ class ReservationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // Check reservation conditions using the service
+            // Check reservation conditions using the service reservationServ
             if ($this->reservationService->isReservationValid($reservation)) {
                 
                 $reservationRepository->save($reservation, true);

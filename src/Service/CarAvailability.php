@@ -21,7 +21,7 @@ class CarAvailability
 
         foreach ($car->getReservations() as $reservation) {
             $dateEnd = $reservation->getDateEnd();
-
+            // set latest dateEnd
             if ($latestDateEnd === null || $dateEnd > $latestDateEnd) {
                 $latestDateEnd = $dateEnd;
             }
