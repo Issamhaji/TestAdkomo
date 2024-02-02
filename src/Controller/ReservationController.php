@@ -69,7 +69,7 @@ class ReservationController extends AbstractController
     {
         $user = $userRepository->findOneBy(['id' => $id]);
         $list = $reservationRepository->findBy(['user' => $user]);
-
+        //check if user has resv or not
         if (empty($list)) {
             $this->addFlash('green', 'you have no reservation');
             return $this->redirectToRoute('app_home');
@@ -77,7 +77,7 @@ class ReservationController extends AbstractController
         // dd($list);
         
         foreach ($list as $reservation) {
-
+            //use voter
             if($this->isGranted(ReservationVoter::VIEW, $reservation) === false ){
                 $this->addFlash('green', 'you can not acces this list');
                 return $this->redirectToRoute('app_home');

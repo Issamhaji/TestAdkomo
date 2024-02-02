@@ -28,7 +28,8 @@ security:
 
     access_decision_manager:
         strategy: affirmative
-        allow_if_all_abstain: false       
+        allow_if_all_abstain: false
+            #--
                  
 
             # activate different ways to authenticate

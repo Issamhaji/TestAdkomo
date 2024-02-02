@@ -1,8 +1,6 @@
 <?php
 declare(strict_types=1);
 
-
-
 namespace App\Voter;
 
 use App\Entity\User;
@@ -34,7 +32,7 @@ class ReservationVoter extends Voter
         if (!$user instanceof User) {
             return false;
         }
-
+        //check if user_id of reservation equal login user
         return $user->getId() === $reservation->getUser()->getId();
 
     }
