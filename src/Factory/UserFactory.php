@@ -68,7 +68,7 @@ final class UserFactory extends ModelFactory
             $plainText = '123456';
             // hash the plain password
             $hashedPassword = $this->hasher->hashPassword($user, $plainText);
-            // set the hashed password
+            // set the hashed passwor
             $user->setPassword($hashedPassword);
         });
     }

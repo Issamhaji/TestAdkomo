@@ -58,7 +58,7 @@ final class CarFactory extends ModelFactory
     protected function initialize(): self
     {
         return $this
-            // ->afterInstantiate(function(Car $car): void {})
+
         ;
     }
 
